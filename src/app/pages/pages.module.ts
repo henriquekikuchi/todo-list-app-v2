@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material/material.module';
-import { AppRoutingModule } from '../app-routing.module';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list/todo-list-item/todo-list-item.component';
@@ -23,7 +22,6 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
     MaterialModule,
     DirectiveModule,
   ],
