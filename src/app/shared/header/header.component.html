@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <span>Todo List - v2</span>
+  <span class="spacer"></span>
+  <div *ngIf="displayBotoes">
+    <button mat-flat-button color="primary" [routerLink]="['tarefa']" routerLinkActive="white-border" >Home</button>
+    <button mat-flat-button color="primary" [routerLink]="['criar-tarefa']" routerLinkActive="white-border" >Criar tarefa</button>
+    <button mat-flat-button color="warn" (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>

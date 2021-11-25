@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 appHighlight>Login</h1>
+  <mat-card>
+    <form *ngIf="loginForm" [formGroup]="loginForm">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="abc@abc.com">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="senha" placeholder="Digite sua senha">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <!-- <input type="submit"> -->
+        <button (click)="onSubmit()" color="primary" mat-flat-button>Submit</button>
+        <mat-icon>submit</mat-icon>
+      </p>
+    </form>
+    </mat-card>
+</div>

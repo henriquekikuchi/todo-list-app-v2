@@ -1,0 +1,17 @@
+  <!-- <mat-grid-list *ngIf="tarefas" cols="4" rowHeight="4:2.3">
+    <h1 style="margin-top: 10px; text-align: center;">Lista de Tarefas</h1>
+    <mat-grid-tile *ngFor="let tarefa of tarefas" style="margin: 5px;">
+      <app-todo-list-item [tarefaObj]= "tarefa"></app-todo-list-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+ -->
+<div class="container">
+  <h1 style="text-align: center; margin-top: 15px;" appHighlight>Lista de Tarefas</h1>
+  <div *ngIf="tarefas$ | async as tarefas; else DisplaySpinner">
+    <app-todo-list-item *ngFor="let tarefa of tarefas; index as id" [tarefaObj]="tarefa" [tarefaId]="id" (avisoBotaoDeletar)="deletarTarefa($event)" (avisoBotaoCheck)="concluirTarefa($event)" (avisoBotaoUpdate)="updateTarefa($event)"></app-todo-list-item>
+
+  </div>
+  <ng-template #DisplaySpinner>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>

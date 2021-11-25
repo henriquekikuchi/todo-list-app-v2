@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 appHighlight>Nova tarefa</h1>
+  <mat-card>
+    <form *ngIf="criarTaskForm" [formGroup]="criarTaskForm">
+      <p>
+        <mat-form-field appearance="outline" style="margin-top: 15px">
+          <mat-label>Titulo</mat-label>
+          <input matInput formControlName="titulo" placeholder="titulo da tarefa">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline" >
+          <mat-label>Descricao</mat-label>
+          <textarea matInput formControlName="descricao" placeholder="descricao da tarefa..."></textarea>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <!-- <input type="submit"> -->
+        <button (click)="onSubmit()" color="primary" mat-flat-button>Submit</button>
+        <mat-icon>submit</mat-icon>
+      </p>
+    </form>
+  </mat-card>
+</div>
